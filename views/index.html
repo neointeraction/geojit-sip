@@ -28,22 +28,28 @@
     </header>
     <div class="banner-content">
       <div class="banner-flex">
-        <div class="banner1" style="--delay: 1">
+        <div class="banner banner1" style="--delay: 1">
           <img src="../assets/images/banner/banner1.png" alt="banner1" />
+          <h3 class="banner-title banner-title1" id="banner-title1">
+            Financial Advice
+          </h3>
         </div>
-        <div class="banner2" style="--delay: 2">
+        <div class="banner banner2" style="--delay: 2">
           <img src="../assets/images/banner/banner2.png" alt="banner2" />
+          <h3 class="banner-title" id="banner-title2">Investment Options</h3>
         </div>
-        <div class="banner3" style="--delay: 3">
+        <div class="banner banner3" style="--delay: 3">
           <img src="../assets/images/banner/banner3.png" alt="banner3" />
+          <h3 class="banner-title" id="banner-title3">Exclusive Offers</h3>
         </div>
-        <div class="banner4" style="--delay: 4">
+        <div class="banner banner4" style="--delay: 4">
           <img src="../assets/images/banner/banner4.png" alt="banner4" />
+          <h3 class="banner-title" id="banner-title4">Priority Support</h3>
         </div>
-        <div class="banner5" style="--delay: 5">
+        <div class="banner banner5" style="--delay: 5">
           <img src="../assets/images/banner/banner5.png" alt="banner5" />
         </div>
-        <div class="banner6" style="--delay: 6">
+        <div class="banner banner6" style="--delay: 6">
           <img src="../assets/images/banner/banner6.png" alt="banner6" />
         </div>
       </div>
@@ -76,8 +82,11 @@
         <div class="confirmation-slider">
           <div id="status">
             <input id="confirm" type="range" value="0" min="0" max="100" />
-            <span class="slider-label" id=" slider-label"
+            <span class="slider-label" id="slider-label"
               >Slide to Confirm Membership</span
+            >
+            <span class="slider-label slider-label-done" id=" slider-label-done"
+              >Congrats on joining the club!</span
             >
             <span class="confirm-notice"
               >Congratulations! You've joined the Geojit SIP Club!</span
@@ -89,7 +98,7 @@
     </div>
 
     <!-- generate-plan  -->
-    <section class="generate-plan">
+    <section class="generate-plan" id="generate-plan-section">
       <div class="container">
         <h5 class="section-label-title">Geojit SIP Club</h5>
         <h2 class="section-main-title">Choose a Dream You Want to Achieve</h2>
@@ -97,6 +106,7 @@
           <div class="dreams-block">
             <label class="icon">
               <input
+                class="icon-radio"
                 type="radio"
                 name="icon-input"
                 value="entrepreneurial-success"
@@ -110,10 +120,10 @@
 
             <label class="icon">
               <input
+                class="icon-radio"
                 type="radio"
                 name="icon-input"
-                value="retirement-bliss
-              "
+                value="retirement-bliss"
               />
               <img
                 src="../assets/images/dream/d2.png"
@@ -123,13 +133,19 @@
               <p class="dream-label">Retirement Bliss</p>
             </label>
             <label class="icon">
-              <input type="radio" name="icon-input" value="world-travel" />
+              <input
+                type="radio"
+                class="icon-radio"
+                name="icon-input"
+                value="world-travel"
+              />
               <img src="../assets/images/dream/d3.png" alt="world-travel" />
               <p class="dream-label">World Travel</p>
             </label>
             <label class="icon">
               <input
                 type="radio"
+                class="icon-radio"
                 name="icon-input"
                 value="education-excellence"
               />
@@ -140,18 +156,609 @@
               <p class="dream-label">Education Excellence</p>
             </label>
             <label class="icon">
-              <input type="radio" name="icon-input" value="dream-home" />
+              <input
+                type="radio"
+                class="icon-radio"
+                name="icon-input"
+                value="dream-home"
+              />
               <img src="../assets/images/dream/d5.png" alt="Dream Home" />
               <p class="dream-label">Dream Home</p>
             </label>
           </div>
         </div>
         <div class="action-btn">
-          <button class="custom-btn" id="generate-plan">Generate Plan</button>
+          <div>
+            <div class="select-item-message" id="select-item-message">
+              * Please select a Dream you want to acheive
+            </div>
+            <button class="custom-btn" id="generate-plan">Generate Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- entrepreneurial-success -->
+    <section class="plan-section entrepreneurial-success section-active">
+      <div class="container">
+        <div class="back-to-section">
+          <img src="../assets/images/back-section.svg" alt="back-section" />
+        </div>
+
+        <h5 class="section-label-title">Dream chosen</h5>
+        <h2 class="section-main-title">Entrepreneurial Success</h2>
+
+        <div class="ps-content">
+          <div class="row align-center">
+            <div class="col-md-3">
+              <img
+                src="../assets/images/dream/d1.png"
+                alt="Entrepreneurial Success"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">Enter current age</label>
+                    <input
+                      type="text"
+                      class="custom-input"
+                      placeholder="(in Years)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row nt-40">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">I want funds in</label>
+                    <select
+                      name="occupation"
+                      id="occupation"
+                      class="custom-input"
+                    >
+                      <option value="5">5 Years</option>
+                      <option value="10">10 Years</option>
+                      <option value="15">15 Years</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label"
+                      >Enter target budget (INR)</label
+                    >
+                    <div class="range">
+                      <input
+                        type="range"
+                        min="0"
+                        max="80"
+                        value="0"
+                        class="custom-range range-slider"
+                      />
+                      <div class="range-value">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-btn">
+            <button class="custom-btn submit-btn">Submit</button>
+          </div>
+        </div>
+        <div class="ps-success">
+          <div class="circle">
+            <div class="circle__item">
+              <div class="rupee-img">
+                <img src="../assets/images/rupee.svg" alt="" />
+              </div>
+              <svg class="circle__spinner" viewBox="0 0 50 50">
+                <circle
+                  class="path"
+                  cx="25"
+                  cy="25"
+                  r="20"
+                  fill="none"
+                  stroke="#088CA1"
+                  stroke-width="1"
+                ></circle>
+              </svg>
+            </div>
+          </div>
+          <h4 class="success-text">
+            Great choice, Mathew! We're here to help you achieve your dream.
+            Based on your selections, we're preparing a personalized roadmap
+            just for you.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!-- retirement-bliss -->
+    <section class="plan-section retirement-bliss section-active">
+      <div class="container">
+        <div class="back-to-section">
+          <img src="../assets/images/back-section.svg" alt="back-section" />
+        </div>
+
+        <h5 class="section-label-title">Dream chosen</h5>
+        <h2 class="section-main-title">Retirement Bliss</h2>
+
+        <div class="ps-content">
+          <div class="row align-center">
+            <div class="col-md-3">
+              <img src="../assets/images/dream/d2.png" alt="Retirement Bliss" />
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">Enter current age</label>
+                    <input
+                      type="text"
+                      class="custom-input"
+                      placeholder="(in Years)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row nt-40">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">I want funds in</label>
+                    <select
+                      name="occupation"
+                      id="occupation"
+                      class="custom-input"
+                    >
+                      <option value="5">5 Years</option>
+                      <option value="10">10 Years</option>
+                      <option value="15">15 Years</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label"
+                      >Enter target budget (INR)</label
+                    >
+                    <div class="range">
+                      <input
+                        type="range"
+                        min="0"
+                        max="80"
+                        value="0"
+                        class="custom-range range-slider"
+                      />
+                      <div class="range-value">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-btn">
+            <button class="custom-btn submit-btn">Submit</button>
+          </div>
+        </div>
+        <div class="ps-success">
+          <div class="circle">
+            <div class="circle__item">
+              <div class="rupee-img">
+                <img src="../assets/images/rupee.svg" alt="" />
+              </div>
+              <svg class="circle__spinner" viewBox="0 0 50 50">
+                <circle
+                  class="path"
+                  cx="25"
+                  cy="25"
+                  r="20"
+                  fill="none"
+                  stroke="#088CA1"
+                  stroke-width="1"
+                ></circle>
+              </svg>
+            </div>
+          </div>
+          <h4 class="success-text">
+            Great choice, Mathew! We're here to help you achieve your dream.
+            Based on your selections, we're preparing a personalized roadmap
+            just for you.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!-- world-travel -->
+    <section class="plan-section world-travel section-active">
+      <div class="container">
+        <div class="back-to-section">
+          <img src="../assets/images/back-section.svg" alt="back-section" />
+        </div>
+
+        <h5 class="section-label-title">Dream chosen</h5>
+        <h2 class="section-main-title">World Travel</h2>
+
+        <div class="ps-content">
+          <div class="row align-center">
+            <div class="col-md-3">
+              <img src="../assets/images/dream/d3.png" alt="world-travel" />
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">Enter current age</label>
+                    <input
+                      type="text"
+                      class="custom-input"
+                      placeholder="(in Years)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row nt-40">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">I want funds in</label>
+                    <select
+                      name="occupation"
+                      id="occupation"
+                      class="custom-input"
+                    >
+                      <option value="5">5 Years</option>
+                      <option value="10">10 Years</option>
+                      <option value="15">15 Years</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label"
+                      >Enter target budget (INR)</label
+                    >
+                    <div class="range">
+                      <input
+                        type="range"
+                        min="0"
+                        max="80"
+                        value="0"
+                        class="custom-range range-slider"
+                      />
+                      <div class="range-value">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-btn">
+            <button class="custom-btn submit-btn">Submit</button>
+          </div>
+        </div>
+        <div class="ps-success">
+          <div class="circle">
+            <div class="circle__item">
+              <div class="rupee-img">
+                <img src="../assets/images/rupee.svg" alt="" />
+              </div>
+              <svg class="circle__spinner" viewBox="0 0 50 50">
+                <circle
+                  class="path"
+                  cx="25"
+                  cy="25"
+                  r="20"
+                  fill="none"
+                  stroke="#088CA1"
+                  stroke-width="1"
+                ></circle>
+              </svg>
+            </div>
+          </div>
+          <h4 class="success-text">
+            Great choice, Mathew! We're here to help you achieve your dream.
+            Based on your selections, we're preparing a personalized roadmap
+            just for you.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!-- education-excellence -->
+    <section class="plan-section education-excellence section-active">
+      <div class="container">
+        <div class="back-to-section">
+          <img src="../assets/images/back-section.svg" alt="back-section" />
+        </div>
+
+        <h5 class="section-label-title">Dream chosen</h5>
+        <h2 class="section-main-title">Education Excellence</h2>
+
+        <div class="ps-content">
+          <div class="row align-center">
+            <div class="col-md-3">
+              <img
+                src="../assets/images/dream/d4.png"
+                alt="education-excellence"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">Enter current age</label>
+                    <input
+                      type="text"
+                      class="custom-input"
+                      placeholder="(in Years)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row nt-40">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">I want funds in</label>
+                    <select
+                      name="occupation"
+                      id="occupation"
+                      class="custom-input"
+                    >
+                      <option value="5">5 Years</option>
+                      <option value="10">10 Years</option>
+                      <option value="15">15 Years</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label"
+                      >Enter target budget (INR)</label
+                    >
+                    <div class="range">
+                      <input
+                        type="range"
+                        min="0"
+                        max="80"
+                        value="0"
+                        class="custom-range range-slider"
+                      />
+                      <div class="range-value">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-btn">
+            <button class="custom-btn submit-btn">Submit</button>
+          </div>
+        </div>
+        <div class="ps-success">
+          <div class="circle">
+            <div class="circle__item">
+              <div class="rupee-img">
+                <img src="../assets/images/rupee.svg" alt="" />
+              </div>
+              <svg class="circle__spinner" viewBox="0 0 50 50">
+                <circle
+                  class="path"
+                  cx="25"
+                  cy="25"
+                  r="20"
+                  fill="none"
+                  stroke="#088CA1"
+                  stroke-width="1"
+                ></circle>
+              </svg>
+            </div>
+          </div>
+          <h4 class="success-text">
+            Great choice, Mathew! We're here to help you achieve your dream.
+            Based on your selections, we're preparing a personalized roadmap
+            just for you.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!-- dream-home -->
+    <section class="plan-section dream-home section-active">
+      <div class="container">
+        <div class="back-to-section">
+          <img src="../assets/images/back-section.svg" alt="back-section" />
+        </div>
+
+        <h5 class="section-label-title">Dream chosen</h5>
+        <h2 class="section-main-title">Dream Home</h2>
+
+        <div class="ps-content">
+          <div class="row align-center">
+            <div class="col-md-3">
+              <img src="../assets/images/dream/d5.png" alt="Dream Home" />
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">Enter current age</label>
+                    <input
+                      type="text"
+                      class="custom-input"
+                      placeholder="(in Years)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row nt-40">
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label">I want funds in</label>
+                    <select
+                      name="occupation"
+                      id="occupation"
+                      class="custom-input"
+                    >
+                      <option value="5">5 Years</option>
+                      <option value="10">10 Years</option>
+                      <option value="15">15 Years</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-control">
+                    <label for="" class="form-label"
+                      >Enter target budget (INR)</label
+                    >
+                    <div class="range">
+                      <input
+                        type="range"
+                        min="0"
+                        max="80"
+                        value="0"
+                        class="custom-range range-slider"
+                      />
+                      <div class="range-value">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-btn">
+            <button class="custom-btn submit-btn">Submit</button>
+          </div>
+        </div>
+        <div class="ps-success">
+          <div class="circle">
+            <div class="circle__item">
+              <div class="rupee-img">
+                <img src="../assets/images/rupee.svg" alt="" />
+              </div>
+              <svg class="circle__spinner" viewBox="0 0 50 50">
+                <circle
+                  class="path"
+                  cx="25"
+                  cy="25"
+                  r="20"
+                  fill="none"
+                  stroke="#088CA1"
+                  stroke-width="1"
+                ></circle>
+              </svg>
+            </div>
+          </div>
+          <h4 class="success-text">
+            Great choice, Mathew! We're here to help you achieve your dream.
+            Based on your selections, we're preparing a personalized roadmap
+            just for you.
+          </h4>
         </div>
       </div>
     </section>
 
+    <!-- report section  -->
+    <section class="report-section generated-report">
+      <div class="container">
+        <div class="title-flex">
+          <img src="../assets/images/user.svg" alt="user" />
+          <h2 class="section-main-title">
+            <span>Mathew’s</span> Investment Plan
+          </h2>
+        </div>
+        <div class="action-flex">
+          <button class="info-btns">
+            <span
+              ><img src="../assets/images/download.svg" alt="download" /></span
+            >Download
+          </button>
+          <button class="info-btns">
+            <span><img src="../assets/images/share.svg" alt="share" /></span
+            >Share
+          </button>
+          <button class="info-btns">
+            <span><img src="../assets/images/call.svg" alt="call" /></span>Call
+          </button>
+        </div>
+
+        <p class="body-text text-center nt-40">
+          Based on the information provided, here's the investment plan tailored
+          to your financial goals:
+        </p>
+        <div class="calculation-block">
+          <h2 class="cb-title">
+            Here's how you can understand the difference between starting an SIP
+            now versus later.
+          </h2>
+          <div class="cb-info-grid">
+            <div class="row cb-header">
+              <div class="col-md-3">
+                <div class="cb-head first">Sip Starting Time</div>
+              </div>
+              <div class="col-md-3">
+                <div class="cb-head first">Now</div>
+              </div>
+              <div class="col-md-3">
+                <div class="cb-head">After 5 years</div>
+              </div>
+              <div class="col-md-3">
+                <div class="cb-head last">After 10 years</div>
+              </div>
+            </div>
+            <div class="row cb-body">
+              <div class="col-md-3">
+                <div class="cb-head first">
+                  <p class="cb-text">
+                    Amount to deposit to receive 50 lakh in 15 yrs
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cb-head first">
+                  <p class="cb-value">₹10,008</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cb-head"><p class="cb-value">₹21,735</p></div>
+              </div>
+              <div class="col-md-3">
+                <div class="cb-head last"><p class="cb-value">₹61,222</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="schedule-block">
+          <div class="row align-center">
+            <div class="col-md-6">
+              <img src="../assets/images/sip-partner.png" alt="sip-partner" />
+            </div>
+            <div class="col-md-6">
+              <p class="body-text">
+                To learn more about mutual fund schemes that align with your
+                goals, schedule a call with our experts.
+              </p>
+              <button class="custom-btn mt-10">Schedule a Call</button>
+            </div>
+          </div>
+        </div>
+        <div class="disclaimer-block">
+          <div class="disclaimer-box">
+            <h3 class="db-title">Disclaimer</h3>
+            <p class="body-text mb-20">
+              Investment in securities market are subject to market risks, read
+              all the related documents carefully before investing. Geojit
+              Financial Services Limited does not make any representations or
+              warranties about the insurance products, servicing of policy and
+              adjudication of claims and cannot be held liable for the same.
+              This mail contains only an indication of the insurance product.
+              For more details on risk factors, terms, conditions and
+              exclusions, please read the respective policy documents.
+            </p>
+            <p class="body-text">
+              GFSL is a licensed corporate agent with License No. CA0226 issued
+              by IRDAI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- whats in for you  -->
     <section class="in-for-you">
       <div class="container">
@@ -324,14 +931,11 @@
       wow.init();
     </script>
     <script>
-      $("input").on("change", function () {
-        // Get the value of the checked radio button
+      $(".icon-radio").on("change", function () {
         var value = $('input[name="icon-input"]:checked').val();
 
-        // Remove the 'active' class from all labels with class 'icon'
         $(".icon").removeClass("active");
 
-        // Add the 'active' class to the parent label of the checked radio button
         $('input[name="icon-input"]:checked')
           .closest(".icon")
           .addClass("active");
@@ -341,12 +945,71 @@
     </script>
 
     <script>
-      $("#confirm").on("change", function () {
+      $(document).ready(function () {
+        $("#generate-plan").on("click", function () {
+          var value = $('input[name="icon-input"]:checked').val();
+
+          if (!value) {
+            $("#select-item-message").fadeIn();
+            return;
+          } else {
+            $("#select-item-message").hide();
+          }
+
+          $(".section-active").hide();
+          $("#generate-plan-section").hide();
+
+          $("." + value).fadeIn();
+        });
+      });
+      $(document).ready(function () {
+        $(".back-to-section").on("click", function () {
+          var value = $('input[name="icon-input"]:checked').val();
+          $("#generate-plan-section").fadeIn();
+          $("." + value).hide();
+        });
+      });
+    </script>
+
+    <script>
+      // swipe to confirm btn
+      $("#confirm").on("input change", function () {
         var slidepos = $(this).val();
-        if (slidepos > 99) {
-          // User slided the slider
+        var tolerance = 1;
+
+        if (slidepos >= 100) {
           $("#confirm").addClass("done");
           $(".confirm-notice").fadeIn();
+          $(".slider-label-done").css("display", "block");
+          $("#slider-label-done").fadeIn();
+          $("#banner-title4").fadeIn();
+          $("#banner-title3").fadeIn();
+          $("#banner-title2").fadeIn();
+          $("#banner-title1").fadeIn();
+          // Disable the slider when it reaches maximum value
+          $("#confirm").prop("disabled", true);
+        } else {
+          $("#confirm").prop("disabled", false);
+        }
+
+        if (slidepos > 0) {
+          // User slid the slider
+          $("#slider-label").hide();
+        } else {
+          $("#slider-label").show();
+        }
+
+        if (slidepos >= 20 - tolerance && slidepos <= 20 + tolerance) {
+          $("#banner-title1").fadeIn();
+        }
+        if (slidepos >= 40 - tolerance && slidepos <= 40 + tolerance) {
+          $("#banner-title2").fadeIn();
+        }
+        if (slidepos >= 60 - tolerance && slidepos <= 60 + tolerance) {
+          $("#banner-title3").fadeIn();
+        }
+        if (slidepos >= 80 - tolerance && slidepos <= 80 + tolerance) {
+          $("#banner-title4").fadeIn();
         }
       });
 
@@ -355,13 +1018,41 @@
 
       sliderEl.addEventListener("input", (event) => {
         const tempSliderValue = event.target.value;
-
         sliderValue.textContent = tempSliderValue;
-
         const progress = (tempSliderValue / sliderEl.max) * 100;
-
-        sliderEl.style.background = `linear-gradient(to right, #017670 ${progress}%, #fff ${progress}%)`;
+        sliderEl.style.background = `linear-gradient(to right, #017670 ${
+          progress + 5
+        }%, #fff ${progress + 5}%)`;
         sliderEl.style.borderRadius = "30px";
+      });
+    </script>
+    <script>
+      // input range
+      const sliderRangInputEl = document.querySelector(".range-slider");
+      const sliderRangeInputValue = document.querySelector(".range-value");
+
+      sliderRangInputEl.addEventListener("input", (event) => {
+        const tempSliderRangeValue = event.target.value;
+        sliderRangeInputValue.textContent = `${tempSliderRangeValue} Lakhs `;
+        const progress = (tempSliderRangeValue / sliderRangInputEl.max) * 100;
+        sliderRangInputEl.style.background = `linear-gradient(to right, #017670 ${progress}%, #ccc ${progress}%)`;
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Listen for click event on submit button
+        $(".submit-btn").click(function () {
+          // Hide ps-content
+          $(".ps-content").hide();
+          $(".back-to-section").hide();
+
+          // Show ps-success
+          $(".ps-success").fadeIn();
+          setTimeout(function () {
+            $(".section-active").hide();
+            $(".generated-report").fadeIn();
+          }, 9500); // 15 seconds
+        });
       });
     </script>
   </body>
