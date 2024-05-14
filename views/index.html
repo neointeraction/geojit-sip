@@ -1028,14 +1028,18 @@
     </script>
     <script>
       // input range
-      const sliderRangInputEl = document.querySelector(".range-slider");
-      const sliderRangeInputValue = document.querySelector(".range-value");
+      const sliderRangeInputs = document.querySelectorAll(".range-slider");
+      const sliderRangeValues = document.querySelectorAll(".range-value");
 
-      sliderRangInputEl.addEventListener("input", (event) => {
-        const tempSliderRangeValue = event.target.value;
-        sliderRangeInputValue.textContent = `${tempSliderRangeValue} Lakhs `;
-        const progress = (tempSliderRangeValue / sliderRangInputEl.max) * 100;
-        sliderRangInputEl.style.background = `linear-gradient(to right, #017670 ${progress}%, #ccc ${progress}%)`;
+      sliderRangeInputs.forEach((sliderRangInputEl, index) => {
+        const sliderRangeInputValue = sliderRangeValues[index];
+
+        sliderRangInputEl.addEventListener("input", (event) => {
+          const tempSliderRangeValue = event.target.value;
+          sliderRangeInputValue.textContent = `${tempSliderRangeValue} Lakhs `;
+          const progress = (tempSliderRangeValue / sliderRangInputEl.max) * 100;
+          sliderRangInputEl.style.background = `linear-gradient(to right, #017670 ${progress}%, #ccc ${progress}%)`;
+        });
       });
     </script>
     <script>
