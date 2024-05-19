@@ -656,6 +656,20 @@
 
     <!-- report section  -->
     <section class="report-section generated-report">
+      <div class="header-container gr-header">
+        <div class="container">
+          <div class="header-flex">
+            <img src="../assets/images/logo.png" alt="logo" />
+            <div class="right-content">
+              <img
+                src="../assets/images/header-img.png"
+                class="sip-img"
+                alt="sip-club"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="title-flex">
           <img src="../assets/images/user.svg" alt="user" />
@@ -664,17 +678,19 @@
           </h2>
         </div>
         <div class="action-flex">
-          <button class="info-btns">
+          <button class="info-btns" onclick="CreatePDFfromHTML()">
             <span
-              ><img src="../assets/images/download.svg" alt="download" /></span
-            >Download
+              ><img src="../assets/images/download.svg" alt="download"
+            /></span>
+            <span class="ib-text">Download</span>
           </button>
           <button class="info-btns">
             <span><img src="../assets/images/share.svg" alt="share" /></span
-            >Share
+            ><span class="ib-text">Share</span>
           </button>
           <button class="info-btns">
-            <span><img src="../assets/images/call.svg" alt="call" /></span>Call
+            <span><img src="../assets/images/call.svg" alt="call" /></span
+            ><span class="ib-text">Call</span>
           </button>
         </div>
 
@@ -682,6 +698,11 @@
           Based on the information provided, here's the investment plan tailored
           to your financial goals:
         </p>
+        <div class="circle-info">
+          <div class="ci-item">Current Age <span>35 yrs</span></div>
+          <div class="ci-item">Duration <span>15 yrs</span></div>
+          <div class="ci-item">Target Budget: <span>50 lakh</span></div>
+        </div>
         <div class="calculation-block">
           <h2 class="cb-title">
             Here's how you can understand the difference between starting an SIP
@@ -758,7 +779,25 @@
           </div>
         </div>
       </div>
+      <div class="gr-footer">
+        <div class="container">
+          <div class="gr-footer-flex">
+            <div>
+              <p class="gr-addr">
+                Geojit Financial Services Ltd., Registered Office: 34/659-P,
+                Civil Line Road, Padivattom, Kochi - 682 024, Kerala, India
+              </p>
+            </div>
+            <div class="grf-info">
+              <p>www.geojit.com</p>
+              <p>customercare@geojit.com</p>
+              <p>Phone: +91 484-2901000</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <div id="editor"></div>
     <!-- whats in for you  -->
     <section class="in-for-you">
       <div class="container">
@@ -914,6 +953,75 @@
       type="text/javascript"
       src="../assets/js/vendor/wow.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://html2canvas.hertzen.com/dist/html2canvas.js"
+    ></script>
+
+    <script>
+      function CreatePDFfromHTML() {
+        // Select the buttons you want to hide
+        var buttons = document.querySelectorAll(".info-btns, .custom-btn");
+        var headerFooter = document.querySelectorAll(".gr-header, .gr-footer");
+
+        // Hide the buttons
+        buttons.forEach(function (button) {
+          button.style.display = "none";
+        });
+
+        headerFooter.forEach(function (item) {
+          item.style.display = "block";
+        });
+
+        var HTML_Width = $(".generated-report").width();
+        var HTML_Height = $(".generated-report").height();
+        var top_left_margin = 10;
+        var PDF_Width = HTML_Width + top_left_margin * 1.5;
+        var PDF_Height = PDF_Width * 1.5 + top_left_margin * 2;
+        var canvas_image_width = HTML_Width;
+        var canvas_image_height = HTML_Height;
+
+        var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+
+        html2canvas($(".generated-report")[0]).then(function (canvas) {
+          var imgData = canvas.toDataURL("image/jpeg", 1.0);
+          var pdf = new jsPDF("p", "pt", "a4", [PDF_Width, PDF_Height]);
+          pdf.addImage(
+            imgData,
+            "JPG",
+            top_left_margin,
+            top_left_margin,
+            canvas_image_width,
+            canvas_image_height
+          );
+          for (var i = 1; i <= totalPDFPages; i++) {
+            pdf.addPage(PDF_Width, PDF_Height);
+            pdf.addImage(
+              imgData,
+              "JPG",
+              top_left_margin,
+              -(PDF_Height * i) + top_left_margin * 4,
+              canvas_image_width,
+              canvas_image_height
+            );
+          }
+          pdf.save("report.pdf");
+
+          // Show the buttons again after the PDF is generated
+          buttons.forEach(function (button) {
+            button.style.display = "inline-block";
+          });
+
+          headerFooter.forEach(function (item) {
+            item.style.display = "none";
+          });
+        });
+      }
+    </script>
 
     <script>
       var wow = new WOW({

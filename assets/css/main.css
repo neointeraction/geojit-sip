@@ -699,6 +699,69 @@ body {
   margin-bottom: 20px;
 }
 
+.circle-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ci-item {
+  background-image: url(../images/circle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 142px;
+  width: 142px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ci-item span {
+  font-size: 24px;
+}
+
+.gr-header {
+  box-shadow: none;
+  margin-bottom: 40px;
+  display: none;
+}
+
+.gr-footer {
+  display: none;
+  background: rgba(6, 134, 123, 0.1);
+  margin: 60px 0 20px 0;
+  padding: 20px 0;
+}
+
+.gr-footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gr-footer-flex div {
+  flex-basis: 40%;
+}
+
+.gr-footer-flex p {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.gr-addr {
+  width: 280px;
+}
+
+.grf-info {
+  text-align: right;
+}
+
 /* ---------------------------------------------------------------------  */
 /* ============================= Responsive ============================  */
 /* ---------------------------------------------------------------------  */
@@ -707,8 +770,36 @@ body {
 
 @media only screen and (max-width: 768px) {
   .dreams-block {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Adjust the gap if necessary for a better look on mobile */
   }
+
+  .dreams-block img {
+    width: 100%;
+  }
+
+  .dream-label {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .action-btn {
+    margin-top: 40px;
+  }
+
+  .schedule-block img {
+    width: 100%;
+  }
+
+  .cb-head.first {
+    margin-right: auto;
+  }
+
+  .cb-head.last {
+    margin-left: auto;
+  }
+
   .banner-form {
     width: 90%;
     position: static;
@@ -741,7 +832,7 @@ body {
     font-size: 16px;
   }
   .custom-btn {
-    padding: 14px 126px;
+    padding: 14px 122px;
     font-size: 16px;
   }
   .bb-text {
@@ -771,5 +862,42 @@ body {
   }
   .success-text {
     width: 100%;
+  }
+  .body-text {
+    font-size: 16px;
+  }
+  .footer-body-text {
+    font-size: 16px;
+  }
+  .footer-title {
+    font-size: 18px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+  }
+  .copright-text {
+    font-size: 16px;
+  }
+  .design-partner-text {
+    font-size: 16px;
+  }
+  .cb-title {
+    font-size: 32px;
+  }
+  .ci-item {
+    font-size: 14px;
+    height: 105px;
+  }
+
+  .ci-item span {
+    font-size: 16px;
+  }
+  .ib-text {
+    display: none;
+  }
+  .info-btns span {
+    margin-right: 0;
+  }
+  .action-flex {
+    gap: 20px;
   }
 }
