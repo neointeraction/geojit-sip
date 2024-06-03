@@ -769,23 +769,59 @@ body {
 /* Mobile View */
 
 @media only screen and (max-width: 768px) {
+  .header-flex img[alt="logo"] {
+    width: 38%;
+  }
+
+  .header-flex img[alt="sip-club"] {
+    width: 60%;
+    margin-top: -20px;
+  }
+
+  .right-content {
+    text-align: right;
+  }
+
+  .generate-plan {
+    padding: 30px 0;
+  }
+
   .dreams-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px; /* Adjust the gap if necessary for a better look on mobile */
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .dreams-block .icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    position: relative;
   }
 
   .dreams-block img {
-    width: 100%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .dreams-block .icon.active::after {
+    content: url(../images/check.svg);
+    position: absolute;
+    top: 22%;
+    left: 3%;
+    transform: scale(0.7);
   }
 
   .dream-label {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 8px;
   }
 
   .action-btn {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 
   .schedule-block img {
@@ -867,18 +903,19 @@ body {
     font-size: 16px;
   }
   .footer-body-text {
-    font-size: 16px;
+    font-size: 14px;
   }
   .footer-title {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 14px;
     margin-bottom: 5px;
   }
   .copright-text {
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 40px;
   }
   .design-partner-text {
-    font-size: 16px;
+    font-size: 14px;
   }
   .cb-title {
     font-size: 32px;
@@ -899,5 +936,50 @@ body {
   }
   .action-flex {
     gap: 20px;
+  }
+
+  .ps-content {
+    margin-top: 20px;
+  }
+  .ps-content .row {
+    justify-content: center;
+  }
+
+  .ps-content .row .col-md-3 {
+    text-align: center;
+  }
+  .ps-content img {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+  .header-container {
+    padding: 20px 0;
+  }
+
+  .dreams-block {
+    margin-top: 30px;
+  }
+
+  .dreams-block .icon.active .dream-label {
+    color: #017670;
+  }
+
+  .ps-content .nt-40 {
+    margin-top: 0 !important;
+  }
+
+  .form-control {
+    margin-bottom: 30px;
+  }
+
+  .generate-plan .action-btn {
+    margin-top: 30px;
+  }
+
+  img[alt="footer-logo"] {
+    width: 45%;
+  }
+  .footer-info-block {
+    margin-top: 20px;
   }
 }
