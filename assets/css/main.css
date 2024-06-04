@@ -256,21 +256,21 @@ body {
 
 .footer-body-text {
   color: #232a30;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
 .copright-text {
   color: rgba(118, 118, 118, 0.5);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   text-align: center;
   margin-top: 80px;
 }
 
 .design-partner-text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   text-align: center;
   margin-top: 40px;
@@ -443,7 +443,7 @@ body {
 .select-item-message {
   font-size: 20px;
   text-align: center;
-  color: #017670;
+  color: #d8000c;
   margin-top: -20px;
   margin-bottom: 20px;
 }
@@ -762,6 +762,75 @@ body {
   text-align: right;
 }
 
+.loading-info-text {
+  text-align: center;
+  font-size: 32px;
+  color: #25a360;
+}
+
+.blinking {
+  -webkit-animation: 1.2s blink ease infinite;
+  -moz-animation: 1.2s blink ease infinite;
+  -ms-animation: 1.2s blink ease infinite;
+  -o-animation: 1.2s blink ease infinite;
+  animation: 1.2s blink ease infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 /* ---------------------------------------------------------------------  */
 /* ============================= Responsive ============================  */
 /* ---------------------------------------------------------------------  */
@@ -903,19 +972,20 @@ body {
     font-size: 16px;
   }
   .footer-body-text {
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 20px !important;
   }
   .footer-title {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 14px;
     margin-bottom: 5px;
   }
   .copright-text {
-    font-size: 14px;
-    margin-top: 40px;
+    font-size: 12px;
+    margin-top: 20px;
   }
   .design-partner-text {
-    font-size: 14px;
+    font-size: 12px;
   }
   .cb-title {
     font-size: 32px;
@@ -981,5 +1051,12 @@ body {
   }
   .footer-info-block {
     margin-top: 20px;
+  }
+  .select-item-message {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .loading-info-text {
+    font-size: 24px;
   }
 }
